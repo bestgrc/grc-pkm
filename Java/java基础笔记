@@ -1,0 +1,151 @@
+### java引用数据类型：
+1. 一切类
+2. 数组
+3. 接口
+
+### 获得整型的最大值：Integer.MAX_VALUE
++1后是最小值
+
+Integer.MAX_VALUE+1l可强转为long型
+
+### 控制台输入数据：
+Scanner input = new Scanner(System.in);/n
+float a = input.nextFloat();
+
+input.next()返回值是string类型
+
+### switch—case
+case 条件重复，会报编译错。
+
+### 代码格式化：ctrl+shift+f
+
+### 获得随机数
+```java
+Random random = new Random();
+int nextInt = random.nextInt(x);
+//获得[0,x)的随机数
+```
+
+### 取整
+向上取整用Math.ceil(double a)
+向下取整用Math.floor(double a)
+
+### 数组赋同一值
+Array.fill(一维数组,值)
+Array.fill(一位数组，index，num，值)
+
+### 数组自动排序
+Arrays.sort();
+
+### 数组深拷贝
+Arrays.copyOf(arr,num);
+
+### 数组的查找
+Arrays.binarySearch(arr,key);
+
+
+
+
+
+### 字符串的api
+```java
+		char a[] = {'g','o','o','d'};
+		String s = new String(a); //使用字符数组初始化字符串
+		System.out.println(s);
+		String s1 = new String(a, 1, 2);
+		System.out.println(s1);
+```
+
+
+
+### 字符串查找
+
+```java
+		s.indexOf("o");
+		s.lastIndexOf("o");
+
+		s.charAt(1); 				//获取指定位置的字符串
+		s.substring(1,2); 			//左闭右开
+		s.trim();					//忽略前后空格
+		s.replace("da", "luelue")//字符串替换
+        s.startWith("g")			//是否以特定字符串开头或结尾,返回类型为布尔值
+        s.endWith("d")
+
+       	boolean b = s2.equalsIgnoreCase(s3); //忽略大小写比较字符串
+		s1.compareTo(s2);           //负：s1在s2前；正：s1在s2后，也可使用忽略大小写的方法。
+		s3.toUpperCase()			//转为大小写字符串
+        s3.toLowerCase()
+
+        s.split("\\.")				//分割字符串  点需要双斜杠进行转译
+
+
+```
+
+### 转进制
+Integer.toBinaryString();
+Integer.toHexString();
+Integer.toOctalString();
+
+### 单例模式
+```java
+public class Singtelon {
+	private static Singtelon singtelon = new Singtelon();
+	private Singtelon() {
+
+	}
+	public void print() {
+		System.out.println("hello");
+	}
+
+	public static Singtelon getInstance() {
+		return singtelon;
+	}
+}
+
+public class Demo {
+	public static void main(String[] args) {
+		Singtelon.getInstance().print();
+	}
+}
+```
+
+### this的三种用法
+1. 调用本类中属性
+2. 调用构造方法 （只能放在构造方法第一行）
+3. 标识当前对象
+
+### 进程与线程关系
+进程包含线程
+实现runnable接口优于继承thread接口，因为可以共享资源
+
+### java中static作用详解
+static表示“全局”或者“静态”的意思，用来修饰成员变量和成员方法，也可以形成静态static代码块，但是Java语言中没有全局变量的概念。
+
+被static修饰的成员变量和成员方法独立于该类的任何对象。也就是说，它不依赖类特定的实例，被类的所有实例共享。
+
+只要这个类被加载，Java虚拟机就能根据类名在运行时数据区的方法区内定找到他们。因此，static对象可以在它的任何对象创建之前访问，无需引用任何对象。
+
+用public修饰的static成员变量和成员方法本质是全局变量和全局方法，当声明它类的对象市，不生成static变量的副本，而是类的所有实例共享同一个static变量。
+
+static变量前可以有private修饰，表示这个变量可以在类的静态代码块中，或者类的其他静态成员方法中使用（当然也可以在非静态成员方法中使用--废话），但是不能在其他类中通过类名来直接引用，这一点很重要。实际上你需要搞明白，private是访问权限限定，static表示不要实例化就可以使用，这样就容易理解多了。static前面加上其它访问权限关键字的效果也以此类推。
+
+https://zhidao.baidu.com/question/294516388.html
+
+### 接口和抽象类的区别
+#### 设计层面：抽象类是对一种事物的抽象，即对类抽象，而接口是对行为的抽象。
+
+1.抽象类 和 接口 都是用来抽象具体对象的. 但是接口的抽象级别最高
+2.抽象类可以有具体的方法 和属性,  接口只能有抽象方法和不可变常量
+3.抽象类主要用来抽象类别,接口主要用来抽象功能.
+4、抽象类中，且不包含任何实现，派生类必须覆盖它们。接口中所有方法都必须是未实现的。
+
+#### 
+
+### String、StringBuffer、StringBuilder
+
+|              | String         | StringBuffer | StringBuilder |
+| ------------ | -------------- | ------------ | ------------- |
+| 是否可变     | 不可变字符序列 | 可变字符序列 | 可变字符序列  |
+| 是否线程安全 | 安全           | 安全         | 不安全        |
+|              |                |              |               |
+

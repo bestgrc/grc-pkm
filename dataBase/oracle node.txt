@@ -1,0 +1,206 @@
+不为空：is not null
+
+字符连接：||
+
+取反 not（）
+
+% 任意多个字符
+_一个字符
+
+ASC 升序  （默认）
+DESC   降序    由高到低
+
+单行函数
+lower（）变为小写字符串
+initcap （）首字母变为大写
+substr（“hello”，1，3）字符串截取  
+（oracle下标从0，1开始都一样，oracle比较智能）
+length（“hello”）                 字符串长度
+replace（“hello”，“T”，“x”）内容替换
+
+e.g:显示所有雇员姓名及姓名后三个字符
+substr（ename.）
+
+数值函数
+round（）四舍五入
+trunc（）截断小数位
+mod（）取余
+
+
+显示正好为五个字符的员工的姓名：
+SELECT
+	ENAME
+FROM
+	EMP
+WHERE
+	LENGTH (ENAME) = 5
+
+显示不带R的员工姓名
+SELECT
+	ENAME
+FROM
+	EMP
+WHERE
+	ENAME  NOT IN (
+		SELECT
+			ENAME
+		FROM
+			EMP
+		WHERE
+			ENAME LIKE '%R%'
+	)
+
+显示所有员工姓名的前三个字符
+SELECT
+	SUBSTR(ENAME,1, 3)
+FROM
+	EMP
+
+显示所有员工的姓名，用a替换所有A
+SELECT
+	"REPLACE"(ENAME , 'A','a')
+FROM
+	EMP
+
+显示满10年雇佣年限的员工姓名和雇佣日期
+SELECT
+	ENAME , HIREDATE
+FROM
+	EMP
+WHERE
+	MONTHS_BETWEEN(SYSDATE,HIREDATE)/12 >37;
+
+显示员工的详细资料，按姓名排序
+SELECT
+	*
+FROM
+	EMP
+ORDER BY
+	ENAME
+
+显示所有员工的工作，姓名和薪金，按工作的降序排序，若工作相容则按薪金排序
+SELECT
+	"JOB",ENAME,SAL			//JOB是关键字所以要有引号
+FROM
+	EMP
+ORDER BY
+	"JOB" DESC,SAL
+
+显示在一个月为30天的情况所有员工的日薪金，忽略余数。
+SELECT
+	ENAME,"TRUNC"(SAL/30) DAYSALE
+FROM
+	EMP
+
+找出在任何年份的2月受雇的员工信息
+SELECT
+	*
+FROM
+	EMP
+WHERE
+	TO_CHAR(HIREDATE,'mm')='02'
+
+对于任何员工，显示其加入公司的天数
+SELECT
+	ENAME ,ROUND(SYSDATE-HIREDATE) HIREDAYS
+FROM
+	EMP
+
+显示姓名字段的任何位置包含A的员工信息
+SELECT
+	*
+FROM
+	EMP
+WHERE
+	ENAME LIKE '%A%'
+
+
+
+
+
+查询记录数量
+SELECT
+	COUNT(*)
+FROM
+	EMP
+
+查询出每个雇员的姓名，工资，部门名称，工资在公司的等级（salgrade），及其领导的姓名及工资所在公司的等级
+SELECT
+AE.ENAME,
+ AE.SAL,
+ DNAME,
+ GRADE
+
+FROM
+	EMP AE,DEPT ,SALGRADE ,EMP BE
+WHERE
+	AE.DEPTNO=DEPT.DEPTNO AND
+	AE.SAL>SALGRADE.LOSAL AND
+	AE.SAL<SALGRADE.HISAL
+ORDER BY
+	GRADE
+			
+
+左右连接
+
+查找雇员的编号、姓名及其领导的编号、姓名
+SELECT	
+	E1.EMPNO,E1.ENAME,E2.EMPNO LEADERNO,E2.ENAME LEADERNAME
+FROM 
+	EMP E1,EMP E2
+WHERE
+	E1.MGR = E2.EMPNO(+)
+
+USING子句直接关联
+		SELECT *FROM EMP E JOIN DEPT D USING(DEPTNO)
+		WHERE DEPTNO =30
+
+ON子句，用户自己编写连接的条件。
+
+
+组函数
+
+求员工最高、最低工资
+
+MAX/MIN/COUNT 可放数值、日期、字符 各种都能放
+而 SUM AVE 只能放数值
+
+
+分组统计 group by           有group by，select后只能放groupby内容和组函数(不能出现分组函数之外的字段)
+求出每个部门的雇员数量 按部门编号划分
+SELECT	
+	DEPTNO, count(*)
+FROM 
+	EMP
+GROUP BY
+	DEPTNO
+
+每个部门平均工资
+SELECT	
+	DEPTNO,AVG(SAL)
+FROM 
+	EMP
+GROUP BY
+	DEPTNO
+
+按部门分组，并显示部门的名称，及每个部门员工数
+SELECT
+	DNAME,"COUNT"(DNAME)
+FROM
+	DEPT,EMP
+WHERE
+	DEPT.DEPTNO=EMP.DEPTNO
+GROUP BY 
+	DEPT.DNAME
+			
+要求显示出平均工资大于2000的部门编号和平均工资
+
+
+伪列：oracle写分页的语句
+
+序列：oracle只能通过序列做自动增长。
+
+when no_data_found then
+ralse_application_errir(-20011，‘没有这个员工编号’)
+
+//可设定错误编码取值范围：20000-20999之间
