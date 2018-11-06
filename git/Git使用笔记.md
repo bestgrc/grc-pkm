@@ -8,6 +8,8 @@
 > 如：SVN、CVS、ClearCase和VSS等。
 
 * 分布式版本控制系统: 每个协作者本地都有一个完整的版本库;
+
+  （ Distributed Version Control System，简称 DVCS ）
 > 如：BitKeeper、Mercurial和Bazaar等。
 
 ### 二、Git 安装
