@@ -106,3 +106,44 @@ inode包含文件的元信息，具体来说有以下内容：
 6. 链接数，即有多少文件名指向这个inode
 
 7. 文件数据block的位置
+
+## 六 linux硬盘命名规则
+
+### 串口硬盘
+
+- 包括：
+  - SCSI设备（Small Computer System Interface）
+  - SATA设备 （Serial Advanced Technology Attachment）
+
+- 命名方式：
+  - sda	sdb	...
+
+### 硬盘
+
+- 包括：
+
+  - IDE（Integrated Drive Electronics）
+
+- 命名方式：
+
+  - hda	hdb ...
+
+
+## 七 linux开机顺序
+
+1. 加电自检
+2. BIOS引导 (Basic Input Output System)
+3. 读取MBR (Master Boot Record)
+4. Boot Loader
+5. 加载内核
+6. 设定运行等级
+7. init进程执行rc.sysinit
+8. 启动内核模块
+9. 执行不同运行级别的脚本程序
+10. 执行/etc/rc.d/rc.local
+11. 执行/bin/login程序，进入登录状态
+
+> 拓展阅读
+>
+> - [Linux启动过程（开机启动顺序）](https://blog.csdn.net/wangzhen209/article/details/72377317)
+
