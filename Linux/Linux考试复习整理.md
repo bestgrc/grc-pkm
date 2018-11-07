@@ -73,7 +73,36 @@
 
 
 
-### 4. linux启动顺序
+## 三 linux启动顺序
 
 ![607348-20151229231206354-919070678](..\picture\面试题\linuxstart.png)
 
+
+
+## 四 vfs（virtual file system）
+
+- 这是Linux文件系统对外的接口。linux支持十几个文件系统，通过vfs，调用者可以不用关心各个文件系统的底层实现。
+
+## 五 inode
+
+> 参考资料
+>
+> - [Linux的inode的理解](https://www.cnblogs.com/itech/archive/2012/05/15/2502284.html)
+
+### inode的内容
+
+inode包含文件的元信息，具体来说有以下内容：
+
+1. 文件的字节数
+
+2. 文件拥有者的User ID
+
+3. 文件的Group ID
+
+4. 文件的读、写、执行权限
+
+5.  文件的时间戳，共有三个：ctime指inode上一次变动的时间，mtime指文件内容上一次变动的时间，atime指文件上一次打开的时间。
+
+6. 链接数，即有多少文件名指向这个inode
+
+7. 文件数据block的位置
