@@ -6,20 +6,20 @@
 
 ## 1. 基本操作
 
-| 操作       | 命令                                          | 拓展         | 命令   |
-| ---------- | --------------------------------------------- | ------------ | ------ |
-| 设置用户名 | $ git config --global user.name "Your Name"   |              |        |
-| 设置邮箱   | $ git config --global user.email "Your Email" |              |        |
-| 初始化     | $ git init                                    |              |        |
-| 克隆       | $ git clone                                   |              |        |
-| 获取       | $ git fetch origin master                     |              |        |
-| 变基       | $ git rebase origin master                    |              |        |
-| 合并       | $ git merge origin master                     |              |        |
-| 拉取       | $ git pull                                    |              |        |
-| 添加       | $ git add file                                | 添加全部变化 | .      |
-|            |                                               | 添加某文件   | 文件名 |
-| 提交       | $ git commit –m “提交信息”                    |              |        |
-| 推送       | $ git push origin master                      |              |        |
+| 操作       | 命令                                          | 拓展         | 命令                    |
+| ---------- | --------------------------------------------- | ------------ | ----------------------- |
+| 设置用户名 | $ git config --global user.name "Your Name"   |              |                         |
+| 设置邮箱   | $ git config --global user.email "Your Email" |              |                         |
+| 初始化     | $ git init                                    |              |                         |
+| 克隆       | $ git clone                                   | 指定分支     | git clone -b 分支号 url |
+| 获取       | $ git fetch origin master                     |              |                         |
+| 变基       | $ git rebase origin master                    |              |                         |
+| 合并       | $ git merge origin master                     |              |                         |
+| 拉取       | $ git pull                                    |              |                         |
+| 添加       | $ git add file                                | 添加全部变化 | .                       |
+|            |                                               | 添加某文件   | 文件名                  |
+| 提交       | $ git commit –m “提交信息”                    |              |                         |
+| 推送       | $ git push origin master                      |              |                         |
 
 > pull = fetch + merge
 >
@@ -89,3 +89,8 @@ Hi bestgrc! You've successfully authenticated, but GitHub does not provide shell
   - BLOB对象
   - tree对象
   - commit对象
+
+
+
+
+
