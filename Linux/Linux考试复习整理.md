@@ -94,18 +94,14 @@
 inode包含文件的元信息，具体来说有以下内容：
 
 1. 文件的字节数
-
 2. 文件拥有者的User ID
-
 3. 文件的Group ID
-
 4. 文件的读、写、执行权限
-
-5.  文件的时间戳，共有三个：ctime指inode上一次变动的时间，mtime指文件内容上一次变动的时间，atime指文件上一次打开的时间。
-
+5. 文件的时间戳，共有三个：ctime指inode上一次变动的时间，mtime指文件内容上一次变动的时间，atime指文件上一次打开的时间。
 6. 链接数，即有多少文件名指向这个inode
-
 7. 文件数据block的位置
+
+
 
 ## 六 linux硬盘命名规则
 
@@ -131,17 +127,16 @@ inode包含文件的元信息，具体来说有以下内容：
 
 ## 七 linux开机顺序
 
-1. 加电自检
-2. BIOS引导 (Basic Input Output System)
-3. 读取MBR (Master Boot Record)
-4. Boot Loader
-5. 加载内核
-6. 设定运行等级
-7. init进程执行rc.sysinit
-8. 启动内核模块
-9. 执行不同运行级别的脚本程序
-10. 执行/etc/rc.d/rc.local
-11. 执行/bin/login程序，进入登录状态
+1. BIOS引导 (Basic Input Output System)
+2. 读取MBR (Master Boot Record)
+3. Boot Loader
+4. 加载内核
+5. 设定运行等级
+6. init进程执行rc.sysinit
+7. 启动内核模块
+8. 执行不同运行级别的脚本程序
+9. 执行/etc/rc.d/rc.local
+10. 执行/bin/login程序，进入登录状态
 
 > 拓展阅读
 >
