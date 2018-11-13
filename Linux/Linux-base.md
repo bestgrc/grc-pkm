@@ -142,3 +142,39 @@ inode包含文件的元信息，具体来说有以下内容：
 >
 > - [Linux启动过程（开机启动顺序）](https://blog.csdn.net/wangzhen209/article/details/72377317)
 
+
+
+## 八 linux中的命令
+
+### ps -ef |grep 
+
+-   -e 显示所有进程。
+-   -f 全格式。
+-   |是管道命令 是指ps命令与grep同时执行
+
+>    参考资料
+>
+>   -   [linux命令 ps -ef 的含义](https://blog.csdn.net/qq_15037231/article/details/79753735)
+>   -   [ps -ef|grep详解](https://www.cnblogs.com/freinds/p/8074651.html)
+
+
+
+## 九 shell编程
+
+-eq           //等于
+
+-ne           //不等于
+
+-gt            //大于
+
+-lt            //小于
+
+-ge            //大于等于
+
+-le            //小于等于
+
+
+
+${变量}	引用变量值
+
+\#	求长度
