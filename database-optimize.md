@@ -95,7 +95,7 @@ like  “%str%” 不支持索引， "str%"号是支持索引的
 2.  oracle ： where中使用rownum
 3.  mysql ： top
 
-### SQL中的join
+## SQL中的join
 
 | INNER JOIN | LEFT /RIGHT [OUTER] JOIN     | FULL [OUTER] JOIN | CROSS JOIN |
 | ---------- | ---------------------------- | ----------------- | ---------- |
