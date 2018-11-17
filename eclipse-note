@@ -30,14 +30,6 @@
 
  >大小设置成小四比较适中。
 
- ### jsp字符编码默认值
- #### 修改为utf-8
- #### 解决方法
- 1. window
- 2. Web
- 3. jsp files
- 4. Encoding
-
 ### 三、新建类自动添加注释
 
  #### 方法一：Eclipse中设置在创建新类时自动生成注释
@@ -60,3 +52,39 @@
   ```
 
   [参考文献](https://blog.csdn.net/xyw591238/article/details/50978162)
+
+### 四、jsp字符编码默认值
+
+#### 修改为utf-8
+
+#### 解决方法
+
+1. window
+2. Web
+3. jsp files
+4. Encoding
+
+### 五、显示空白符，如空格、制表符、换行符
+
+1. windows–>preference
+2. general
+3. editors
+4. text editors
+5. show whitespace characters
+
+### 六、使用空格代替tab
+
+1. windows–>preference
+2. general
+3. editors
+4. text editors
+5. insert space for tabs(displayed tab width :4)
+
+
+
+1. windows–>preference
+2. java
+3. code style
+4. formatter
+5. new
+6. space only

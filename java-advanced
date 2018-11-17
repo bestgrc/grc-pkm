@@ -1,3 +1,48 @@
+# java进阶
+
+## java的13个规范
+
+1. JDBC——Java Database Connectivity
+2. JSP——Java Server Pages
+3. Servlet
+4. XML——Extensible Markup Language
+5. JavaMail
+6. JAF——JavaBeans Activation Framework
+7. EJB——Enterprise JavaBean
+8. JNDI——Java Name and DirectoryInterface
+9. RMI——Remote Method Invoke
+10.  JavaIDL/CORBA
+11. JMS——Java Message Service
+12. JTA——Java Transaction Architecture
+13. JTS——Java Transaction Service
+
+
+
+### EJB
+
+一直提到EJB的概念，就去了解了一下。
+
+> 参考资料
+>
+> - [EJB到底是什么？](https://www.cnblogs.com/strugglion/p/6027318.html)
+> - [EJB](http://www.baike.com/wiki/EJB)
+
+| 概念     | 把已经编写好的类打包放在服务器上执行。（区别于在客户端上运行。） |
+| -------- | ------------------------------------------------------------ |
+| 技术基础 | 远程方法调用（RMI）（技术基础：对象的序列化；远程过程调用（RPC）） |
+
+组成：
+
+1. SessionBean
+2. Entity Bean
+3. MessageDriven Bean
+
+EJB似乎是一个老技术，更多的人开始用spring。看了一堆别人的博客还有百度百科，也没实际搞懂它。或许要有实际开发经验，才能理解这个技术更替的意义吧。
+
+
+
+
+
 ## 圈复杂度
 
 > 参考资料
