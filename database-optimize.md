@@ -117,6 +117,16 @@ mappers（映射器）
 
 
 
+## Result Maps collection already contains value for ...解决方案
+
+>   参考资料：
+>
+>   -   [关于mybatis启动报Result Maps collection already contains value for ...的问题总结](https://blog.csdn.net/nocol123/article/details/73928925)
+
+1、当同一个xml映射文件内存在两个相同的id（即两个sql语句的id相同）时会报此错
+
+解决：查询sql语句的id值修改
+
 
 
 
