@@ -92,5 +92,14 @@ Hi bestgrc! You've successfully authenticated, but GitHub does not provide shell
 
 
 
+windows平台下使用git add，git deploy 文件时经常出现“warning: LF will be replaced by CRLF” 的提示。
 
+>   参考资料：
+>
+>   -   [关于git提示“warning: LF will be replaced by CRLF”终极解答](https://www.jianshu.com/p/450cd21b36a4)
+
+```shell
+git config --global core.autocrlf false
+#不检查
+```
 
