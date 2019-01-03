@@ -148,6 +148,7 @@ inode包含文件的元信息，具体来说有以下内容：
 
 ### ps -ef |grep 
 
+-   ps 显示当前进程 (process) 的状态。
 -   -e 显示所有进程。
 -   -f 全格式。
 -   |是管道命令 是指ps命令与grep同时执行
@@ -156,6 +157,28 @@ inode包含文件的元信息，具体来说有以下内容：
 >
 >   -   [linux命令 ps -ef 的含义](https://blog.csdn.net/qq_15037231/article/details/79753735)
 >   -   [ps -ef|grep详解](https://www.cnblogs.com/freinds/p/8074651.html)
+
+### pwd
+
+-   print working directory
+
+-   获取目前所在的工作目录的绝对路径
+
+
+
+### ./	需要有执行权限
+
+sh/bash 不需要执行权限
+
+打开一个subshell去读取、执行.sh 文件
+
+>   参考资料
+>
+>   -   [linux里source、sh、bash、./有什么区别](https://www.cnblogs.com/pcat/p/5467188.html)
+
+>   扩展
+>
+>   -   cource命令 在**当前shell内**去读取、执行a.sh，而a.sh不需要有"**执行权限**"
 
 
 

@@ -129,11 +129,13 @@ mappers（映射器）
 
 
 
+### Mybatis update 返回值
 
+1.  **默认情况下**，mybatis 的 update 操作的返回值是 matched 的记录数，并不是受影响的记录数。
 
+1.  boolean updateXxxx(Map<String, Object> paramsMap);
 
-
-
+    Mybatis是根据查询到的记录数进行转换的(1表示为true,0表示为false) 。然而，如果查询到多条记录(大于1)，则返回的布尔值为false
 
 
 
@@ -150,8 +152,5 @@ mappers（映射器）
 | INNER JOIN | LEFT /RIGHT [OUTER] JOIN     | FULL [OUTER] JOIN | CROSS JOIN |
 | ---------- | ---------------------------- | ----------------- | ---------- |
 | 交集       | 左/右表完全集，右/左的关联集 | 并集              | 笛卡尔乘积 |
-
-
-
 
 
