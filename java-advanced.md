@@ -104,3 +104,35 @@ EJB似乎是一个老技术，更多的人开始用spring。看了一堆别人�
 > - [java中，数组为什么要设计为协变](https://zhidao.baidu.com/question/373185490288625524.html)
 > - [数组是协变的，具体化的](https://blog.csdn.net/zjq2008wd/article/details/8788310)
 
+
+
+## i/o操作
+
+1.  自动关闭流：
+
+    ​	创建流的语句写在try(){}的小括号里
+
+2.  关闭流，省去try-catch
+
+    ​	IOUtils.closeQuietly();
+
+
+
+Tomcat VM arguments
+
+-Dcatalina.base="E:\apache-tomcat-7.0.91" 
+
+-Dcatalina.home="E:\apache-tomcat-7.0.91" 
+
+-Dwtp.deploy="E:\apache-tomcat-7.0.91\webapps" 
+
+-Djava.endorsed.dirs="E:\apache-tomcat-7.0.91\endorsed" 
+
+-Djava.library.path="C:\Users\huayu\AppData\Local\MyEclipse 2017 CI\binary\com.sun.java.jdk8.win32.x86_64_1.8.0.v112\bin;E:\apache-tomcat-7.0.91\bin"
+-DappconfigServerUrl=http://172.16.33.3:8180/appconfig 
+
+-Dcorp=default
+
+
+
+-d 代表 启动参数
