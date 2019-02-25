@@ -155,14 +155,33 @@ inode包含文件的元信息，具体来说有以下内容：
 
 >    参考资料
 >
->   -   [linux命令 ps -ef 的含义](https://blog.csdn.net/qq_15037231/article/details/79753735)
->   -   [ps -ef|grep详解](https://www.cnblogs.com/freinds/p/8074651.html)
+>    -   [linux命令 ps -ef 的含义](https://blog.csdn.net/qq_15037231/article/details/79753735)
+>    -   [ps -ef|grep详解](https://www.cnblogs.com/freinds/p/8074651.html)
+
+
+
+tail -f 
 
 ### pwd
 
 -   print working directory
-
 -   获取目前所在的工作目录的绝对路径
+
+### 日期相关：
+
+1.  date -r 查看当前服务器时间
+
+2.  date -s 设置时间和日期
+
+例如：将系统日期设定成2009年11月3日的命令
+
+命令 ： "date -s 11/03/2009"
+
+将系统时间设定成下午5点55分55秒的命令
+
+命令 ： "date -s 17:55:55"
+
+
 
 
 
