@@ -146,6 +146,19 @@ inode包含文件的元信息，具体来说有以下内容：
 
 ## 八 linux中的命令
 
+服务器发包常用命令
+
+ps -ef | grep tomcat
+kill -9 ${pid}
+
+tomcat path: /usr/local/apache-tomcat-8.5.34/
+
+./bin/startup.sh
+
+tail -f logs/catalina.out      根据文件描述符进行追踪，当文件改名或被删除，追踪停止。ctr+c 停止追踪
+
+
+
 ### ps -ef |grep 
 
 -   ps 显示当前进程 (process) 的状态。
@@ -159,8 +172,6 @@ inode包含文件的元信息，具体来说有以下内容：
 >    -   [ps -ef|grep详解](https://www.cnblogs.com/freinds/p/8074651.html)
 
 
-
-tail -f 
 
 ### pwd
 
