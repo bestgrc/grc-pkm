@@ -211,7 +211,7 @@ sh/bash 不需要执行权限
 >   -   cource命令 在**当前shell内**去读取、执行a.sh，而a.sh不需要有"**执行权限**"
 
 
-
+etc/profile 修改环境变量，改完后source编译生
 ## [linux下删除文件夹的命令](https://www.cnblogs.com/winifred-tang94/p/5863722.html)
 
 使用rm -rf 目录名字 命令即可
