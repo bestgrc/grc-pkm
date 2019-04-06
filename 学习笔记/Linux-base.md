@@ -157,7 +157,7 @@ tomcat path: /usr/local/apache-tomcat-8.5.34/
 
 tail -f logs/catalina.out      根据文件描述符进行追踪，当文件改名或被删除，追踪停止。ctr+c 停止追踪
 
-
+rz / sz linux系统接收文件、发送文件
 
 ### ps -ef |grep 
 
@@ -229,7 +229,11 @@ eg
 
 
 
+yum 安装
 
+rz、sz
+
+yum install -y lrzsz
 
 
 
@@ -259,7 +263,21 @@ Ubuntu默认不支持命令ll，必须用 ls -l，这样使用起来不是很方
 
 ​        “c”字符设备文件。
 
-https://www.cnblogs.com/kongzhongqijing/p/3488884.html0，
+https://www.cnblogs.com/kongzhongqijing/p/3488884.html0
+
+
+
+1) ls -lt  时间最近的在前面
+
+2) ls -ltr 时间从前到后
+
+3) 利用sort
+
+​    ls -l | sort +7 (日期为第8列)   时间从前到后
+
+​    ls -l | sort -r +7      时间最近的在前面
+
+
 
 
 

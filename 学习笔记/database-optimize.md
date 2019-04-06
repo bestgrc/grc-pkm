@@ -154,3 +154,9 @@ mappers（映射器）
 | 交集       | 左/右表完全集，右/左的关联集 | 并集              | 笛卡尔乘积 |
 
 
+
+select from xxx where yyy like
+
+select from xxx where yyy like %% 
+
+后者是查询yyy非空
