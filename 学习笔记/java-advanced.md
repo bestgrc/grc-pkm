@@ -149,3 +149,145 @@ java中的private修饰的变量和方法，可以在非本类中，以反射的
 
 ## JVM
 
+
+
+
+
+## 线程
+
+### 线程间竞争
+
+#### 竞争的概念
+
+多个线程访问同一资源，则线程间存在竞争关系。一个线程通过操作系统分配得到该资源，其他线程不得不等待。
+
+#### 竞争引发的问题
+
+##### 1. 死锁
+
+一组线程都获得了部分资源，还想得到其他线程所占用的资源，所有线程都陷入死锁。
+
+##### 2. 饥饿
+
+一个线程由于其他线程总是优先于它而被无线拖延。
+
+
+
+### 线程间互斥
+
+#### 互斥的概念
+
+若干线程要使用同一共享资源时，任何时刻最多允许一个线程去使用，其他要使用该资源的线程必须等待，直到战友资源的线程释放该资源。（互斥是解决线程间竞争关系的手段）
+
+> 临界资源：共享变量代表的资源
+>
+> 临界区：并发线程中与共享变量有关的程序段
+
+
+
+### 线程同步
+
+#### 同步的概念
+
+协作线程间互相等待对方消息或信号的协调关系
+
+> 互斥是一种特殊的同步
+
+#### 线程同步机制
+
+通过信号量和pv操作实现
+
+p：测试信号量状态
+
+v：改变信号量状态
+
+>  pv操作互斥执行，且执行时不能被打断
+
+
+
+
+
+## JVM
+
+### TLAB
+
+#### what
+
+- Thread Local Allocation Buffer，线程本地分配缓存区
+
+- 这是一个线程专用的内存分配区域。
+
+
+
+#### why
+
+new对象，给对象分配堆内存时，指针碰撞并发，引起内存分配错误，内存分配的效率较低。引入TLAB就是为了解决这个痛点。
+
+
+
+#### how
+
+线程初始化时，申请一块指定大小的内存，只给当前线程使用，这样每个线程都单独拥有一个空间，如果需要分配内存，就在自己的空间上分配，这样就不存在竞争的情况，可以大大提升分配效率。
+
+> TLAB空间的内存非常小，缺省情况下仅占有整个Eden空间的1%
+
+
+
+#### 缺陷
+
+- 固定大小，只要内存稍大，就放不下。
+- 剩余空间利用问题
+
+
+
+#### 参考资料：
+
+[浅析java中的TLAB](https://www.jianshu.com/p/8be816cbb5ed)
+
+
+
+## 内联
+
+### what is 内联
+
+JVM将方法进行处理，将方法调用替换为方法本身。
+
+### why 内联
+
+- 去除函数调用时产生的开销，提升运行效率。
+- 以空间换时间
+
+### when 内联
+
+JVM会自己看情况用
+
+
+
+## 调用python代码
+
+只是简单的执行代码，还未涉及传参。
+
+```java
+ProcessBuilder pb = new ProcessBuilder(
+        "E:\\downloads\\php.exe",
+        "C:\\Users\\dell\\Desktop\\demo\\php\\accepted.php");
+Process worker = pb.start();
+
+StringBuilder result = new StringBuilder();
+final BufferedReader reader = new BufferedReader(new InputStreamReader(worker.getInputStream()));
+try {
+    String line;
+    while ((line = reader.readLine()) != null) {
+        System.out.println("!!!"+line);
+        result.append(line);
+    }
+} catch (IOException e) {
+    e.printStackTrace();
+}
+worker.waitFor();
+int exit = worker.exitValue();
+if (exit != 0) {
+    throw new IOException("failed to execute:" + pb.command() + " with result:" + result);
+}
+System.out.println(result.toString());
+```

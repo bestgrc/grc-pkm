@@ -10,9 +10,23 @@ SOAP(Simple Object AccessProtocol）简单对象访问协议。(包是xml格式)
 >
 >       是一种用于描述、发现、集成Web Service的技术，它是Web Service协议栈的一个重要部分。通过UDDI，企业可以根据自己的需要动态查找并使用Web服务，也可以将自己的Web服务动态地发布到UDDI注册中心，供其他用户使用。
 
+优势：
+
+1. 安全性高
+
+2. 成熟
+
 
 
 REST (Representational State Transfer) 表述性状态传递
+
+- 面向资源的接口设计
+
+优势：
+
+1. 效率高
+
+
 
 
 

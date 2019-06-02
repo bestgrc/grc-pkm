@@ -70,5 +70,7 @@ sudo make install
 
 
 
+# 安装htop命令
 
+[CentOS下为yum加入rpmForge源，使用yum安装htop](<https://www.cnblogs.com/qiyebao/p/5461698.html>)
 

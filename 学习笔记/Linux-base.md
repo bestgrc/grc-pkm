@@ -173,6 +173,20 @@ rz / sz linux系统接收文件、发送文件
 
 
 
+sudo 以系统管理者身份执行指令
+
+
+
+ free -h  查看当前内存使用   大致
+
+Men 物理内存
+
+Swap 虚拟内存
+
+
+
+top 查看 内存  详细
+
 ### pwd
 
 -   print working directory
@@ -300,3 +314,12 @@ https://www.cnblogs.com/kongzhongqijing/p/3488884.html0
 ${变量}	引用变量值
 
 \#	求长度
+
+
+
+
+
+十 坑
+
+[Chrony内存破坏漏洞(CVE-2015-1822)](https://www.linuxidc.com/Linux/2015-04/116205.htm)
+

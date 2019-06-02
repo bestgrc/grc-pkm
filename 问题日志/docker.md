@@ -20,3 +20,22 @@ mysql的一个容器stop不了，反复stop，到后来docker的所有命令都�
 
 docker 重启后，运行中的容器也会随之重启，而且是否随之重启通过参数可以配置。
 
+
+
+
+
+
+
+启动docker ，chrony沾满内存
+
+handle
+
+内存查看命令：
+
+cat /proc/meminfo
+
+
+
+
+
+![1554600912719](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\1554600912719.png)
