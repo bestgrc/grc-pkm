@@ -74,3 +74,15 @@ sudo make install
 
 [CentOS下为yum加入rpmForge源，使用yum安装htop](<https://www.cnblogs.com/qiyebao/p/5461698.html>)
 
+
+
+yum
+
+yum -y update  更新
+
+
+
+centOS 安装 docker
+
+<https://www.runoob.com/docker/centos-docker-install.html>
+

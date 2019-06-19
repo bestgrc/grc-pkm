@@ -226,7 +226,7 @@ sh/bash 不需要执行权限
 
 
 etc/profile 修改环境变量，改完后source编译生
-## [linux下删除文件夹的命令](https://www.cnblogs.com/winifred-tang94/p/5863722.html)
+### [linux下删除文件夹的命令](https://www.cnblogs.com/winifred-tang94/p/5863722.html)
 
 使用rm -rf 目录名字 命令即可
 
