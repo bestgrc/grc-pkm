@@ -1,5 +1,7 @@
 
 
+# 路径问题
+
 ## 问题描述
 
 window和linux系统文件路径格式不一致问题.
@@ -41,7 +43,11 @@ HttpClientUtils.get
 
 
 
+# 注入方式
 
+spring团队为什么推荐使用构造器注入
+
+<https://blog.csdn.net/wo541075754/article/details/85494481>
 
 ## Integer
 
@@ -59,4 +65,3 @@ HttpClientUtils.get
 ​        System.out.println(c.equals(a+b)); // true equals比较基本类型数值
 ​        System.out.println(g==(a+b)); // ture 向下转型
 ​        System.out.println(g.equals(a+b)); // false Long.equals 非Long,则返回false
-​    }
