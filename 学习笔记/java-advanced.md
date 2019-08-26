@@ -147,12 +147,6 @@ java中的private修饰的变量和方法，可以在非本类中，以反射的
 
 
 
-## JVM
-
-
-
-
-
 ## 线程
 
 ### 线程间竞争
@@ -205,6 +199,33 @@ v：改变信号量状态
 
 
 
+### 线程池
+
+#### 常见线程池
+
+-   Executors.newCacheThreadPool()：可缓存线程池
+
+-   Executors.newFixedThreadPool(int n)：可重用固定个数
+
+-   Executors.newScheduledThreadPool(int n) ：定时及周期性任务
+
+-   Executors.newSingleThreadExecutor()：单线程的线程池
+
+#### 常见缓冲队列
+
+-   ArrayBlockingQueue（int i）
+-   LinkedBlockingQueue（int i）
+-   PriorityBlockingQueue（int i）根据Comparator决定顺序
+-   SynchronizedQueue（）放和取交替
+
+参考资料：
+
+<https://blog.csdn.net/hnd978142833/article/details/80253784>
+
+
+
+
+
 
 
 ## JVM
@@ -243,6 +264,10 @@ new对象，给对象分配堆内存时，指针碰撞并发，引起内存分�
 #### 参考资料：
 
 [浅析java中的TLAB](https://www.jianshu.com/p/8be816cbb5ed)
+
+
+
+### 
 
 
 
