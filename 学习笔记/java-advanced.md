@@ -1,3 +1,5 @@
+
+
 # java进阶
 
 ## java的13个规范
@@ -16,7 +18,7 @@
 12. JTA——Java Transaction Architecture
 13. JTS——Java Transaction Service
 
-
+现在基本没人提？？？？
 
 ### EJB
 
@@ -223,6 +225,47 @@ v：改变信号量状态
 <https://blog.csdn.net/hnd978142833/article/details/80253784>
 
 
+
+### synchronize用法
+
+始终明确这个关键词锁的对象是什么，都是对临界资源上锁
+
+对象锁（代码块调用形式）
+
+1.  对单个对象加锁
+
+```java
+synchronized(对象){
+
+代码块
+
+}
+```
+
+2.  对当前对象加锁
+
+```java
+synchronized(this){
+
+代码块
+
+}
+```
+
+3.  对某个类加锁
+
+```java
+synchronized(xxxx.class){
+
+代码块
+
+}
+```
+
+类锁
+
+1.  加在方法上（对该类的该方法上锁，上锁的同时，其他线程可以访问该类的其他方法。）
+2.  加在类上 （对该类上锁）
 
 
 
