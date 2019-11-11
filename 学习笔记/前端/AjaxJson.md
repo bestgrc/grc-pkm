@@ -151,3 +151,57 @@ JSON 教程https://www.w3school.com.cn/json/index.asp
 [什么是跨域？跨域解决方法](https://blog.csdn.net/qq_38128179/article/details/84956552)
 
 [jsonp原理详解——终于搞清楚jsonp是啥了](https://blog.csdn.net/hansexploration/article/details/80314948>)
+
+
+
+# 实例
+
+## 实例1:使用multipart/form-data上传文件及参数
+
+前端使用input标签
+
+```
+	<input type="file" enctype="multipart/form-data" id="fileExport" @change="handleFileChange" accept=".rar, .zip" ref="inputer">​
+```
+
+js
+
+```javascript
+handleFileChange (e) {    
+    let inputDOM = this.$refs.inputer;    
+    this.fileData.file = inputDOM.files[0];    
+    this.file = inputDOM.files[0];// 通过DOM取文件数据    
+    let size = Math.floor(this.file.size / 1024);//计算文件的大小　    
+    let formData = new FormData();//new一个formData事件   
+    formData.append("file",this.file); //将file属性添加到formData里    
+    formData.append("revever",this.fileData.recever);    
+    let requestConfig = {        
+        headers: {            
+            'Content-Type': 'multipart/form-data'       
+        },   
+    }   
+},
+```
+
+controller
+
+```java
+/**   * 上传文件   * @return   */  
+@ResponseBody@PostMapping("file")  
+public JSONObject addfile(MultipartFile[] file,HttpServletRequest request) {      CommonsMultipartResolver multipartResolver = new CommonsMultipartResolver();      MultipartHttpServletRequest multiReq = multipartResolver.resolveMultipart(request);      Object recever = multiReq.getAttribute("recever");     
+ return fileTransferService.upload(file[0]); 
+   }
+```
+
+可以解析这个request
+
+
+
+# 拓展：
+
+[formData使用](https://www.cnblogs.com/tugenhua0707/p/7599691.html)
+
+[multipart/form-data 详解](https://www.cnblogs.com/tugenhua0707/p/8975121.html)
+
+
+
