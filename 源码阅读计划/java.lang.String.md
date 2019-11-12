@@ -8,6 +8,11 @@ String 的底层实现就是一个char型数组。
 
 其中 CharSequence 是第一次见，实现类有：[CharBuffer](https://docs.oracle.com/javase/8/docs/api/java/nio/CharBuffer.html), [Segment（未保护的String，不常用吧）](https://docs.oracle.com/javase/8/docs/api/javax/swing/text/Segment.html), [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html), [StringBuffer](https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuffer.html), [StringBuilder](https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html)
 
+|              | String         | StringBuffer | StringBuilder |
+| ------------ | -------------- | ------------ | ------------- |
+| 是否可变     | 不可变字符序列 | 可变字符序列 | 可变字符序列  |
+| 是否线程安全 | 安全           | 安全         | 不安全        |
+
 
 
 ## 二、Basic Multilingual Plane (BMP) 

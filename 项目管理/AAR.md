@@ -1,4 +1,0 @@
-*AAR*(After Action Review)
-
-
-
