@@ -103,3 +103,7 @@ git config --global core.autocrlf false
 #不检查
 ```
 
+
+
+[gitlab权限说明](https://blog.csdn.net/kaldi/article/details/90718336)
+

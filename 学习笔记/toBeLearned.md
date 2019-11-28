@@ -25,3 +25,16 @@ zookeeper 实现分布式锁  可以去了解一下。看redis的时候经常有
 *AAR*(After Action Review)
 
 uml图，是以后开发中对于思路/业务进行整理及总结的好工具。
+
+
+
+
+
+正则 优化
+https://www.cnblogs.com/wangrd/p/7073885.html
+
+
+
+浏览器不和时宜的使用缓存
+1. ajax请求查看文件是否已删除走了缓存。
+2. css 文件走了缓存。
