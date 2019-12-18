@@ -46,3 +46,11 @@ Spring事务传播属性:
 参考资料：
 
 [Spring事务管理嵌套事务详解 : 同一个类中，一个方法调用另外一个有事务的方法](https://blog.csdn.net/levae1024/article/details/82998386)
+
+
+
+```
+https://www.cnblogs.com/dennyzhangdd/p/9602673.html
+http://www.linkedkeeper.com/1045.html
+```
+

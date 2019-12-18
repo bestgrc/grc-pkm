@@ -17,3 +17,8 @@ Artery.ajax.post("api/v1/xtsyqk/pageData" , {
 后端将文件流写道response里
 
 
+
+webuploder 实现文件上传，可用来做毕设的技术选型。
+
+https://www.cnblogs.com/winteronlyme/p/7008703.html
+
