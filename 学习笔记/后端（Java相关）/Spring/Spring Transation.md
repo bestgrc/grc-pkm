@@ -50,7 +50,10 @@ Spring事务传播属性:
 
 
 ```
+学习事务的帖子
 https://www.cnblogs.com/dennyzhangdd/p/9602673.html
 http://www.linkedkeeper.com/1045.html
 ```
+
+
 

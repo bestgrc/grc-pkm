@@ -100,19 +100,10 @@ spring团队为什么推荐使用构造器注入
 
 <https://blog.csdn.net/wo541075754/article/details/85494481>
 
-## Integer
 
- public static void main(String[]arg){
-​        Integer a=1;
-​        Integer b=2;
-​        Integer c=3;
-​        Integer d=3;
-​        Integer e=321;
-​        Integer f=321;
-​        Long g=3L;
-​        System.out.println(c==d); // true 初始化调用Inetger.valueof, 使用缓存(-128~127)的引用,使用对象相同
-​        System.out.println(e==f); // false new对象
-​        System.out.println(c==(a+b));	//true a+b向下转型,c也向下转型
-​        System.out.println(c.equals(a+b)); // true equals比较基本类型数值
-​        System.out.println(g==(a+b)); // ture 向下转型
-​        System.out.println(g.equals(a+b)); // false Long.equals 非Long,则返回false
+
+
+
+ioc帖子
+
+https://www.cnblogs.com/dennyzhangdd/p/7688411.html

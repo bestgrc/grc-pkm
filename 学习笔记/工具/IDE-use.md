@@ -86,3 +86,15 @@
 | 切换编辑的文件         | Ctrl+E       |
 | 找到变量或方法的调用处 | Ctrl+Shift+G |
 
+
+
+# eclipse插件
+
+help-->Eclipse Markplace路径打开
+
+| 功能                       | 网址                                    |
+| -------------------------- | --------------------------------------- |
+| mybatis mapper文件相互跳转 | http://dl.bintray.com/harawata/eclipse/ |
+|                            |                                         |
+|                            |                                         |
+
