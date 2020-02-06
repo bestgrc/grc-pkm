@@ -11,7 +11,7 @@
 | 获取目前所在的工作目录的绝对路径 | pwd                                                   | print working directory                                      |
 | 日期相关                         | date -r 查看当前服务器时间 <br>date -s 设置时间和日期 | 例如：将系统日期设定成2009年11月3日的命令<br>命令 ： "date -s 11/03/2009"<br>将系统时间设定成下午5点55分55秒的命令<br>命令 ： "date -s 17:55:55" |
 | 删除文件夹                       | rm -rf                                                | r 就是向下递归，不管有多少级目录，一并删除<br/>-f 就是直接强行删除，不作任何提示的意思<br>参考资料<br>[linux下删除文件夹的命令](https://www.cnblogs.com/winifred-tang94/p/5863722.html) |
-|                                  |                                                       |                                                              |
+| 寻找文件及目录                   | find -name "\*name\*"                                 |                                                              |
 |                                  |                                                       |                                                              |
 |                                  |                                                       |                                                              |
 

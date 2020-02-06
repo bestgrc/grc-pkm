@@ -2,11 +2,6 @@ swager
 
 
 
-正则 优化
-https://www.cnblogs.com/wangrd/p/7073885.html
-
-
-
 浏览器不和时宜的使用缓存
 1. ajax请求查看文件是否已删除走了缓存。
 2. css 文件走了缓存。

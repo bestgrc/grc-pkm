@@ -55,7 +55,7 @@
 | Tomcat启动时间限制调节 | server-->双击tomcat server容器进入配置文件界面-->Timeouts-->Start(in seconds) |
 | 插件安装               | Help --> Install New Software<br>markdown http://winterwell.com/software/updatesite/ |
 | 取消validating         | Eclispe-->Window-->Preferences-->Validation-->Suspeng all validators |
-| tomcat 热部署          |                                                              |
+| tomcat 热部署          | 双击Tomcat-->Server Options-->Serve modules without publishing |
 |                        |                                                              |
 
 
@@ -98,3 +98,10 @@ help-->Eclipse Markplace路径打开
 |                            |                                         |
 |                            |                                         |
 
+
+
+最小化当前窗口 Alt+Esc
+
+缩小当前窗口 win+向下键
+
+最小化全部窗口 win+m 
