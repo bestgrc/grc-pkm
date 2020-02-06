@@ -40,10 +40,21 @@ nothing added to commit but untracked ..."
 $ git config --global core.quotepath false
 ```
 
-### 5. 创建新ssh密钥
+#### 5. 创建新ssh密钥
 
 ```shell
 $ ssh-keygen -t rsa -C "注册Github用的邮箱"  
 ```
 
 一路回车，会在默认位置创建ssh密钥
+
+
+
+#### github下载速度过慢
+
+1. 修改dns
+
+参考资料：<https://www.jianshu.com/p/3f6477049ece>
+
+2. 使用gitee fork github中项目，然后再从gitee进项clone。
+

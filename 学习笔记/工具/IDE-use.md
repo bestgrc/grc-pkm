@@ -28,7 +28,7 @@
 | BookMark       | 插入基本书签 F11<br>助记符号书签 Ctrl+F11<br>插入数字书签 Ctrl+Shift+任意数字<br>查看书签         Shift + F11<br>跳转数字书签 Ctrl+对应的标签数字 |
 | 快速操作代码块 | Code --> Surround With<br>Ctrl+Alt+T                         |
 | 快速定义变量   | Refactor --> Extract --> Variable<br>Ctrl+Alt+V Variable<br>Ctrl+Alt+C Constant<br/>Ctrl+Alt+F Field<br/>Ctrl+Alt+P Parameter |
-|                |                                                              |
+| 查看类继承关系 | Ctrl+Alt+U                                                   |
 |                |                                                              |
 
 

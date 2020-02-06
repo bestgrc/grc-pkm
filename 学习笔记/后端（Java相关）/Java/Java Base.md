@@ -440,3 +440,41 @@ HttpClientUtils.get
 ​        System.out.println(c.equals(a+b)); // true equals比较基本类型数值
 ​        System.out.println(g==(a+b)); // ture 向下转型
 ​        System.out.println(g.equals(a+b)); // false Long.equals 非Long,则返回false
+
+
+
+# String 
+
+## 不可变性
+
+String 被设计为final
+
+- 不可继承，不可修改
+- 如果有一个类的引用，它引用的一定是一个String对象，而不可能是其他类的对象。（避免运行时多态）
+
+底层使用private final char数组实现。
+
+- String内部未对char数组内元素进行操作。
+- 不开放对char数组中单个元素进行修改。
+
+
+
+## 安全性
+
+- 确定的值用于参数传递,不必担心该参数在其他类中被修改。
+- 线程安全
+
+
+
+## 效率
+
+String还被缓存于常量池中
+
+- 节省内存空间
+- 提高效率
+
+
+
+参考资料
+
+- [在java中String类为什么要设计成final？](<https://blog.csdn.net/u013905744/article/details/52414111>)

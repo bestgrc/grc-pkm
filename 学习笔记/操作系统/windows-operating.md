@@ -6,10 +6,6 @@ taskkill /f /t /im 8082
 
 
 
+关闭与idea冲突的系统快捷键
 
-
-```
-left join db_hjgl.t_zz zz on sq.c_id = zz.c_sqid
-(case when (zz.c_id is not null) then 1 else 0 end) sfcxzz
-```
-
+<https://blog.csdn.net/cdc_csdn/article/details/80699423>
