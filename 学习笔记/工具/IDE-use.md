@@ -4,7 +4,7 @@
 | ---------------------- | ------------------------------------------- | -------- | -------------- | ------------------------------------------------------- |
 | Lombok                 | javabean省去getset等板式代码                | 是       | 注解           | 开发必备                                                |
 | Free Mybatis           | mapper 的xml与接口文件快速互相定位          | 是       | 页面点击       | mybatis开发必备                                         |
-| Request mapping        | 快速搜到controller                          | 是       | ctrl+shift+\   | springmvc开发必备                                       |
+| Request mapper         | 快速搜到controller                          | 是       | ctrl+shift+\   | springmvc开发必备                                       |
 | Key promoter           | 快捷键提醒                                  |          |                | 提高开发效率必学                                        |
 | Translation            | 翻译                                        | 是       | ctrl+shift+o   | 省的去浏览器搜单词                                      |
 | idea-mybatis-generator | 根据数据库表生成javaBean与mapper文件        |          | 菜单栏->plugin | 节约时间，配合mybatis kt使用，可以大大减少dao层开发时间 |
